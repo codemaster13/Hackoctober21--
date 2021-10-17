@@ -1,0 +1,23 @@
+var firebaseConfig = {
+  apiKey: "AIzaSyBdo8Nk3J7E8xUCIEFM_axrbTgt74CzEX4",
+  authDomain: "iot-project-23662.firebaseapp.com",
+  projectId: "iot-project-23662",
+  storageBucket: "iot-project-23662.appspot.com",
+  messagingSenderId: "1050983860857",
+  appId: "1:1050983860857:web:4a432acfb3e674177c62a8",
+};
+
+// soil moisture
+firebase.initializeApp(firebaseConfig);
+var firebaseRef = firebase.database().ref("Soil");
+document.querySelector("#sendsoil").addEventListener("click", () => {
+  const Soil = document.getElementById("Soil").value;
+  firebaseRef.push(Soil);
+});
+
+// light
+var firebaseRefc = firebase.database().ref("Light");
+document.querySelector("#sendlight").addEventListener("click", () => {
+  const Light = document.getElementById("Light").value;
+  firebaseRefc.push(Light);
+});
