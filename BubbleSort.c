@@ -11,6 +11,7 @@ void bubble_sort(int a[], int n) {
         }
     }
 }
+
 void quicksort(int number[25], int first, int last) {
     int i, j, pivot, temp;
     if (first < last) {
@@ -35,6 +36,7 @@ void quicksort(int number[25], int first, int last) {
         quicksort(number, j + 1, last);
     }
 }
+
 int main() {
   int a[100], n, i, d, swap;
   printf("Enter number of elements in array:\n");
